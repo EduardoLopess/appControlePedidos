@@ -1,0 +1,57 @@
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import * as NavigationBar from 'expo-navigation-bar';
+import { BottomNavigation } from "./src/navigation/Index";
+import { TableScreen } from "./src/screens/tables/Index";
+import { NavigationContainer } from "@react-navigation/native";
+import { ProductsScreen } from "./src/screens/products/Index";
+import { useEffect } from "react";
+import { OrdersScreen } from "./src/screens/orders/Index";
+
+export type RootTabParamList = {
+  Mesas: undefined;
+  Produtos: undefined;
+  Pedidos: undefined
+};
+
+const Tab = createBottomTabNavigator();
+export default function App() {
+
+  useEffect(() => {
+    async function hideNavBar() {
+      await NavigationBar.setVisibilityAsync('hidden')
+      
+    }
+    hideNavBar()
+  }, [])
+
+
+
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        tabBar={() => <BottomNavigation />}
+        screenOptions={{
+          headerTitleAlign: "center",
+        }}
+      >
+        <Tab.Screen
+          name="Mesas"
+          component={TableScreen}
+          options={{ headerTitle: "MESAS" }}
+        />
+
+        <Tab.Screen
+          name="Produtos"
+          component={ProductsScreen}
+          options={{ headerTitle: "PRODUTOS" }}
+        />
+
+        <Tab.Screen
+          name="Pedidos"
+          component={OrdersScreen}
+          options={{ headerTitle: "PEDIDOS"}}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
