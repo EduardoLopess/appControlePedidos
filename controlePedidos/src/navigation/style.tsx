@@ -4,7 +4,7 @@ export default StyleSheet.create({
   container: {
     width: '100%',
     height: 80,
-    backgroundColor: '#b0b1aeff',
+    backgroundColor: 'white',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -14,15 +14,16 @@ export default StyleSheet.create({
 
 
   imgNavigation: {
-    width: 45,
-    height: 45,
+    width: 40,
+    height: 40,
   },
 
 
   divisao: {
     width: 1,
     backgroundColor: 'black',
-    height: '100%'
+    height: '100%',
+    opacity: 0.3
 
   },
 
@@ -33,7 +34,7 @@ export default StyleSheet.create({
   },
 
   txtBtn: {
-    fontSize: 16,
+    fontSize: 15,
   }
 
 
