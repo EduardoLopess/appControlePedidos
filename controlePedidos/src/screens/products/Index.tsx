@@ -1,21 +1,36 @@
 import { View } from "react-native";
-import { PortionCategory } from "../../components/products-category/portion/Index";
-import ProductScreanStyle from './style'
-import { PastelCategory } from "../../components/products-category/pastel/Index";
-import { BearCategory } from "../../components/products-category/bear/Index";
-import { DrinkCategory } from "../../components/products-category/drink/Index";
-import { NoAlcoolCategory } from "../../components/products-category/noAlcool/Index";
-import { AlaminutaCategory } from "../../components/products-category/alaminuta/Index";
+
+import ProductScreanStyle from "./style";
+
+import { ProductCategory } from "../../components/category-products/Index";
 
 export const ProductsScreen = () => {
   return (
     <View style={ProductScreanStyle.container}>
-      <PortionCategory/>
-      <PastelCategory/>
-      <BearCategory/>
-      <DrinkCategory/>
-      <NoAlcoolCategory/>
-      <AlaminutaCategory/>
+      <ProductCategory
+        title="PORÇÕES"
+        urlImg={require("../../../assets/porcoes.png")}
+      />
+      <ProductCategory
+        title="PASTÉIS"
+        urlImg={require("../../../assets/pastel.png")}
+      />
+      <ProductCategory
+        title="CERVEJAS"
+        urlImg={require("../../../assets/cerveja.png")}
+      />
+      <ProductCategory
+        title="DRINKS"
+        urlImg={require("../../../assets/drink.png")}
+      />
+      <ProductCategory
+        title="SEM ÁLCOOL"
+        urlImg={require("../../../assets/noalcool.png")}
+      />
+      <ProductCategory
+        title="À ALA MINUTA"
+        urlImg={require("../../../assets/refeicao.png")}
+      />
     </View>
-  )
+  );
 };
