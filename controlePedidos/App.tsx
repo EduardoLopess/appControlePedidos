@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { ProductsScreen } from "./src/screens/products/Index";
 import { useEffect } from "react";
 import { OrdersScreen } from "./src/screens/orders/Index";
+import { AppState } from "react-native";
 
 export type RootTabParamList = {
   Mesas: undefined;
@@ -17,13 +18,14 @@ const Tab = createBottomTabNavigator();
 export default function App() {
 
   useEffect(() => {
-    async function hideNavBar() {
-      await NavigationBar.setVisibilityAsync('hidden')
-      
-    }
-    hideNavBar()
-  }, [])
+    const subscription = AppState.addEventListener("change", async (nextAppState) => {
+      if (nextAppState === "active") {
+        await NavigationBar.setVisibilityAsync("hidden");
+      }
+    });
 
+    return () => subscription.remove();
+  }, []);
 
 
   return (

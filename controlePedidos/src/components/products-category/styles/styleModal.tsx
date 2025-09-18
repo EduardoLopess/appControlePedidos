@@ -6,7 +6,7 @@ export default StyleSheet.create({
 
     alignItems: "center",
     backgroundColor: "white",
-    
+
     elevation: 10,
     width: "100%",
     maxHeight: "95%",
@@ -21,13 +21,11 @@ export default StyleSheet.create({
     height: "10%",
     alignItems: "center",
     justifyContent: "center",
-    
   },
 
   txtTitleCategory: {
     fontSize: 25,
     fontWeight: "500",
-  
   },
 
   containerContent: {
@@ -35,7 +33,9 @@ export default StyleSheet.create({
     height: "80%",
     borderTopWidth: 1,
     borderBottomWidth: 1,
-    borderColor: "rgba(0,0,0,0.1)",
+    borderColor: "rgba(0,0,0,0.2)",
+    paddingTop: 10,
+    alignItems: "center",
   },
 
   btnCloseContainer: {
@@ -62,4 +62,71 @@ export default StyleSheet.create({
     fontWeight: "bold",
     fontSize: 15,
   },
+
+  //STYLE PRODUTOS MODAL
+  containerType: {
+    width: 150,
+    height: 50,
+    backgroundColor: "#386dbd",
+    marginBottom: 10,
+    borderRadius: 5,
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 5,
+  },
+
+  txtType: {
+    color: "white",
+    fontWeight: "500",
+    fontSize: 18,
+  },
+
+  containerProp: {
+    backgroundColor: "#d3dbd9",
+    width: "100%",
+    height: 60,
+    marginBottom: 5,
+    flexDirection: "row",
+  },
+
+  containerName: {
+    width: "40%",
+    height: "100%",
+    borderRightWidth: 1,
+    borderColor: "rgba(0,0,0,0.2)",
+    justifyContent: "center",
+    paddingLeft: 10,
+  },
+
+  containerPrice: {
+    width: "40%",
+    height: "100%",
+    borderRightWidth: 1,
+    borderColor: "rgba(0,0,0,0.2)",
+    justifyContent: "center",
+    paddingLeft: 10,
+  },
+
+  containerBtnAdd: {
+    width: '20%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center'
+    
+  },
+
+  btnAdd: {
+    width: '80%',
+    height: '80%',
+    backgroundColor: '#13b30dff',
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  txtProp: {
+    fontSize: 18,
+    fontWeight: '400'
+
+  }
 });
