@@ -1,11 +1,18 @@
 import { TouchableOpacity, View, Text, Image, Alert } from "react-native";
 import tableStyle from "./style";
 
+type table = {
+  id: number;
+  number: number;
+  status: boolean;
+};
+
 export const Table = () => {
 
   const alert = () => {
     Alert.alert("ADAS")
   }
+
 
   return (
     <TouchableOpacity style={tableStyle.container} onPress={() => alert()}>

@@ -1,5 +1,6 @@
 import { Image, Modal, Text, TouchableOpacity, View } from "react-native";
 import OrderCardStyle from "./style";
+import OrderModalStyle from "./modalStyle"
 import { useState } from "react";
 
 
@@ -34,8 +35,29 @@ export const Order = () => {
             animationType="slide"
         >
 
-            <TouchableOpacity onPress={close}><Text>FECHAR</Text></TouchableOpacity>
+          <View style={OrderModalStyle.containerTop}>
+            <View style={OrderModalStyle.tableNumber}>
+              <Text style={OrderModalStyle.txtTableNumber}>PEDIDO MESA: 01</Text>
+              <Text style={OrderModalStyle.txtTableNumber}>INICIADO: 12:30</Text>
 
+            </View>
+
+          </View>
+
+          <View style={OrderModalStyle.containerContent}>
+
+          </View>
+
+          <View style={OrderModalStyle.containerBtnClose}>
+            <TouchableOpacity style={[ OrderModalStyle.btn, {backgroundColor: 'red'}]} onPress={close}>
+              <Text style={OrderModalStyle.txtBtn}>FECHAR</Text>
+            </TouchableOpacity>
+             <TouchableOpacity style={OrderModalStyle.btn}>
+              <Text style={OrderModalStyle.txtBtn}>EDITAR</Text>
+            </TouchableOpacity>
+          </View>
+
+            
         </Modal>
       
     </TouchableOpacity>

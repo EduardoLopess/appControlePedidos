@@ -9,7 +9,7 @@ export default StyleSheet.create({
 
     elevation: 10,
     width: "100%",
-    maxHeight: "95%",
+    maxHeight: "100%",
     overflow: "scroll",
 
     zIndex: 5,
@@ -25,7 +25,7 @@ export default StyleSheet.create({
 
   txtTitleCategory: {
     fontSize: 25,
-    fontWeight: "500",
+    fontFamily: 'SpaceMono_Bold'
   },
 
   containerContent: {
@@ -116,17 +116,19 @@ export default StyleSheet.create({
   },
 
   btnAdd: {
-    width: '80%',
-    height: '80%',
+    width: '70%',
+    height: '70%',
     backgroundColor: '#13b30dff',
-    borderRadius: 30,
+    borderRadius: 12,
+    
     justifyContent: 'center',
     alignItems: 'center',
   },
 
   txtProp: {
     fontSize: 18,
-    fontWeight: '400'
+    fontWeight: '400',
+    fontFamily: 'SpaceMono'
 
   }
 });

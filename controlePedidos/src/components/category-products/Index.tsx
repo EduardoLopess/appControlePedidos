@@ -14,12 +14,12 @@ export const ProductCategory = ({ title, urlImg }: Props) => {
   const open = () => setModalVisible(true);
   const close = () => setModalVisible(false);
 
-  // const data = {
-  //   name: 'Polar', category: 'cerveja', type: '600', price: '23,90',
-  //    name: 'Polar', category: 'cerveja', type: '600', price: '23,90',
-  //     name: 'Polar', category: 'cerveja', type: '600', price: '23,90',
-  //      name: 'Polar', category: 'cerveja', type: '600', price: '23,90',
-  // }
+  const data = [
+    { name: "Polar", category: "cerveja", type: "600", price: "23,90" },
+    { name: "Brahma", category: "cerveja", type: "600", price: "23,90" },
+    { name: "Corona", category: "cerveja", type: "600", price: "23,90" },
+    { name: "Polar", category: "cerveja", type: "600", price: "23,90" },
+  ];
 
   return (
     <View>
@@ -43,7 +43,6 @@ export const ProductCategory = ({ title, urlImg }: Props) => {
             </View>
 
             <View style={ModalCategoryStyle.containerContent}>
-
               <View style={ModalCategoryStyle.containerType}>
                 <Text style={ModalCategoryStyle.txtType}>S/Peixe</Text>
               </View>
@@ -57,10 +56,9 @@ export const ProductCategory = ({ title, urlImg }: Props) => {
                 </View>
                 <View style={ModalCategoryStyle.containerBtnAdd}>
                   <TouchableOpacity style={ModalCategoryStyle.btnAdd}>
-                     <EvilIcons name="plus" size={35} color="black" />
+                    <EvilIcons name="plus" size={35} color="black" />
                   </TouchableOpacity>
                 </View>
-
               </View>
             </View>
 

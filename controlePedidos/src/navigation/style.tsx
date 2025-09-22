@@ -35,6 +35,7 @@ export default StyleSheet.create({
 
   txtBtn: {
     fontSize: 15,
+    fontWeight: '500',
   }
 
 
