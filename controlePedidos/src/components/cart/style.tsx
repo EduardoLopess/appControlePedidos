@@ -33,10 +33,34 @@ export default StyleSheet.create({
 
   },
 
+  // -------------------------------------------------------
+  // CONTEUDO CARRINHO
+
   modalContent: {
     width: "100%",
     height: "75%",
+    
+    
   },
+
+  itemContainer: {
+    flexDirection: 'row',
+    width: '100%',
+    height: 80,
+    backgroundColor: "#d3dbd9",
+    marginTop: 10,
+    marginBottom: 10,
+    
+
+  },
+
+
+
+
+
+
+
+  // --------------------------------
 
   btnContainer: {
     position: "absolute",

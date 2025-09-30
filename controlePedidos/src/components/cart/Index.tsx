@@ -9,6 +9,10 @@ export const Cart = () => {
     const open = () => setIsVisible(true)
     const close = () => setIsVisible(false)
 
+    const [expandIsVisible, setExpandIsVisible] = useState<boolean>(false)
+    const openExpand = () => setExpandIsVisible(true)
+    const closeExpand = () => setIsVisible(false)
+
 
     return (
         <TouchableOpacity style={CartStyle.container} onPress={open}>
@@ -22,8 +26,21 @@ export const Cart = () => {
             >
                 <View style={CartStyle.modalContainer}>
                     <View style={CartStyle.cartTop}>
-                        <Text style={CartStyle.txtTable}>PEDIDO INICIADO</Text>
-                        <Text style={CartStyle.txtTable}>MESA 01</Text>
+                        <Text style={CartStyle.txtTable}>CARRINHO</Text>
+                        <Text style={CartStyle.txtTable}>PEDIDO MESA 01</Text>
+
+                    </View>
+
+                    <View style={CartStyle.modalContent}>
+                        <View style={CartStyle.itemContainer}>
+                            <TouchableOpacity onPress={openExpand}><Text>TESTE</Text></TouchableOpacity>
+
+                        {expandIsVisible && (
+                            <View>
+                                <Text>TEXTE EXPANDE</Text>
+                            </View>
+                        )}
+                        </View>
 
                     </View>
 

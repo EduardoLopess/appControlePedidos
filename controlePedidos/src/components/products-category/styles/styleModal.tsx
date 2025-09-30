@@ -126,9 +126,9 @@ export default StyleSheet.create({
   },
 
   txtProp: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '400',
-    fontFamily: 'SpaceMono'
+    fontFamily: 'SpaceMono_Regular'
 
   }
 });

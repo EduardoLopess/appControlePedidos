@@ -61,7 +61,7 @@ export default StyleSheet.create({
   btn: {
     width: '40%',
     height: '50%',
-    backgroundColor: 'blue',
+    backgroundColor: '#492dfcff',
     margin: 10,
     borderRadius: 15,
     alignItems: 'center',
