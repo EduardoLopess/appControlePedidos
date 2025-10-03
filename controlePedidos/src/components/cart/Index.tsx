@@ -11,7 +11,7 @@ export const Cart = () => {
 
     const [expandIsVisible, setExpandIsVisible] = useState<boolean>(false)
     const openExpand = () => setExpandIsVisible(true)
-    const closeExpand = () => setIsVisible(false)
+    const closeExpand = () => setExpandIsVisible(false)
 
 
     return (
@@ -32,8 +32,19 @@ export const Cart = () => {
                     </View>
 
                     <View style={CartStyle.modalContent}>
-                        <View style={CartStyle.itemContainer}>
-                            <TouchableOpacity onPress={openExpand}><Text>TESTE</Text></TouchableOpacity>
+                        <View style={[CartStyle.itemContainer, expandIsVisible && {height: 150}]}>
+                            <View style={CartStyle.ItemProp}>
+
+                            </View>
+
+
+
+                            <TouchableOpacity onPress={() => expandIsVisible ? closeExpand() : openExpand()}>
+                                {expandIsVisible 
+                                    ? <Ionicons name="caret-up-outline" size={35} color="black" />
+                                    : <Ionicons name="caret-down-outline" size={35} color="black" />
+                                }
+                            </TouchableOpacity>
 
                         {expandIsVisible && (
                             <View>

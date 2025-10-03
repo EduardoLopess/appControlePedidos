@@ -44,13 +44,20 @@ export default StyleSheet.create({
   },
 
   itemContainer: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     width: '100%',
     height: 80,
     backgroundColor: "#d3dbd9",
     marginTop: 10,
     marginBottom: 10,
     
+
+  },
+
+  ItemProp: {
+    width: '100%',
+    height: 50,
+    backgroundColor: 'blue'
 
   },
 
